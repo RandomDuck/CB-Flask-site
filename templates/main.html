@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="{{ url_for('static', filename='css/bootstrap.min.css')}}" href="style.css">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
 </head>
 <body>
-    Hello there. <br> General Kenobi!
-    
+    <div class="container">
+        {%body%}
+        {%endbody%} 
+    </div>
 </body>
 </html>
