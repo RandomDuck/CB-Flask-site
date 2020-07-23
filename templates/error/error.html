@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CB puzzle quest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        {% block body %}
+        {% endblock %} 
+    </div>
+    <div class="container-fluid">
+        <button type="button" class="btn btn-primary" onclick="history.back()">Back</button>
+        <a href="{{url_for('index')}}"><button type="button" class="btn btn-secondary">Back to leaderboard</button></a>
+    </div>
+</body>
+</html>
